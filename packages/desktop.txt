@@ -1,0 +1,6 @@
+lightdm
+redshift
+pipewire
+pipewire-pulse
+wireplumber
+alsa-utils

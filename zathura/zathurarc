@@ -1,0 +1,16 @@
+# -- zathura config file
+
+# scroll settings
+set scroll-page-aware true
+set scroll-step 165
+set scroll-full-overlap 0.0
+
+
+# colortheme
+set recolor true 
+# set default-bg "#1e1e2e"
+# set default-fg "#cdd6f4"
+# set statusbar-bg "#313244"
+# set statusbar-fg "#89b4fa"
+# set inputbar-bg "#45475a"
+# set inputbar-fg "#cdd6f4"

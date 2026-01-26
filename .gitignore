@@ -1,0 +1,17 @@
+# secrets
+.env
+.env.*
+*.key
+*.pem
+
+# histories
+*zsh_history
+*bash_history
+
+# system junk
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode
+.idea
