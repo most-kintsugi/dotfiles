@@ -1,25 +1,28 @@
 [general]
 
-import = ["/home/kintsugi/.config/alacritty/themes/dark/kitty.toml"]
+import = ["/home/kintsugi/.config/alacritty/themes/dark/aura.toml"]
 
 
 # Cascadia
 [font]
-size = 16
-normal = { family = "Cascadia Code", style = "Medium" }
-bold = { family = "Cascadia Code", style = "Bold" }
-italic = { family = "Cascadia Code", style = "Italic" }
-bold_italic = { family = "Cascadia Code", style = "Bold Italic" }
+size = 16.5
+normal = { family = "Cascadia Code NF", style = "Regular" }
+bold = { family = "Cascadia Code NF", style = "Bold" }
+italic = { family = "Cascadia Code NF", style = "Italic" }
+bold_italic = { family = "Cascadia Code NF", style = "Bold Italic" }
 offset = { x = 0, y = 0 }
 glyph_offset = { x = 0, y = 0 }
 
 # Jet Brains 
 # [font]
-# size = 16
-# normal = { family = "JetBrainsMonoNL Nerd Font", style = "Light" }
-# bold = { family = "JetBrainsMonoNL Nerd Font", style = "Bold" }
+# size = 16.5
+# normal = { family = "JetBrainsMonoNL Nerd Font", style = "Regular" }
+# bold = { family = "JetBrainsMonoNL Nerd Font", style = "ExtraBold" }
 # italic = { family = "JetBrainsMonoNL Nerd Font", style = "Medium Italic" }
 # bold_italic = { family = "JetBrainsMonoNL Nerd Font", style = "Bold Italic" }
+# offset = { x = 0, y = 0 }
+# glyph_offset = { x = 0, y = 0 }
+
 
 [window]
 opacity = 1

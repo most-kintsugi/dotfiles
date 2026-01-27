@@ -1,6 +1,6 @@
 -- lua/plugins/colorschemes.lua
 
-local colorscheme = "kanagawa"
+local colorscheme = "kanso-mist"
 
 return {
   {
@@ -11,6 +11,7 @@ return {
     end,
   },
 
+  "webhooked/kanso.nvim",
   "nanotech/jellybeans.vim",
   "nikolvs/vim-sunbather",
   "hardselius/warlock",
