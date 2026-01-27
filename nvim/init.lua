@@ -1,7 +1,3 @@
--- require('plugins')
--- require('plugins')
+require('core.settings')
+require('core.keymaps')
 require('plugins')
-require('keymaps')
-require('settings')
-
-require('treesitter-config')

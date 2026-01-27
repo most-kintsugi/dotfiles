@@ -13,9 +13,6 @@ cmd('syntax enable')
 cmd('filetype indent on')
 cmd('filetype plugin on')
 
--- Colorschemes
-vim.cmd.colorscheme("sakura")
-
 -- Tab and Indentation settings
 opt.expandtab = false       -- use tabs instead of spaces (set noexpandtab)
 opt.smarttab = true         -- smart tabs (set smarttab)

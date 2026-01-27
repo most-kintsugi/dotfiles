@@ -1,15 +1,15 @@
 Telegram
-Ungoogled-chromium
+
+Firefox:
 	settings:
 		zoom - 150%
 		Font - Medium
 		onstartup - Continue where you left off
-	plugins:
-		JSONView
-		Ublock
 	bookmarks:
 		gmail
 		bitwarden
 		github
 		translator
-		deepseek/chatgp
+		chatgp
+
+Hiddyfi
