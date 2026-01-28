@@ -5,11 +5,18 @@ Firefox:
 		zoom - 150%
 		Font - Medium
 		onstartup - Continue where you left off
+		privacy
+		[about:config]
+			ui.key.menuAccessKeyFocuses = false
 	bookmarks:
 		gmail
 		bitwarden
 		github
 		translator
-		chatgp
+		chatgpt
+	extensions:
+		privacy badged
+		dark reader
+		vimium !!
 
 Hiddyfi

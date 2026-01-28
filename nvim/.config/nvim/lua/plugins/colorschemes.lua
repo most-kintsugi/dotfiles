@@ -1,17 +1,19 @@
 -- lua/plugins/colorschemes.lua
 
-local colorscheme = "kanso-mist"
+
+local colorscheme = "kanso-pearl"
 
 return {
   {
-    "rebelot/kanagawa.nvim",
-    priority = 1000,
-    config = function()
-      vim.cmd("colorscheme " .. colorscheme)
-    end,
+		"webhooked/kanso.nvim",
+		lazy = false,
+		priority = 1000,
+  	config = function()
+			vim.cmd("colorscheme " .. colorscheme)
+  	end,
   },
 
-  "webhooked/kanso.nvim",
+  "rebelot/kanagawa.nvim",
   "nanotech/jellybeans.vim",
   "nikolvs/vim-sunbather",
   "hardselius/warlock",
