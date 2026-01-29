@@ -1,7 +1,7 @@
 -- lua/plugins/colorschemes.lua
 
 
-local colorscheme = "onedark_dark"
+local colorscheme = "tokusa"
 
 return {
   {
@@ -21,7 +21,8 @@ return {
   "savq/melange-nvim",
   "e-ink-colorscheme/e-ink.nvim",
   "olimorris/onedarkpro.nvim",
-
+	"KKPMW/distilled-vim",
+	"aidyak/tokusa",
   {
     "anAcc22/sakura.nvim",
     dependencies = "rktjmp/lush.nvim",
