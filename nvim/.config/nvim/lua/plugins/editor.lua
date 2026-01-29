@@ -2,6 +2,9 @@
 
 return {
 
+	-- indent guides
+	"saghen/blink.indent",
+
 	-- Commenting
 	"tpope/vim-commentary",
 

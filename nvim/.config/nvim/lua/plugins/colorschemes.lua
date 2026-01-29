@@ -1,7 +1,7 @@
 -- lua/plugins/colorschemes.lua
 
 
-local colorscheme = "kanso-pearl"
+local colorscheme = "e-ink"
 
 return {
   {
@@ -17,7 +17,9 @@ return {
   "nanotech/jellybeans.vim",
   "nikolvs/vim-sunbather",
   "hardselius/warlock",
-
+  "EdenEast/nightfox.nvim",
+  "savq/melange-nvim",
+  "e-ink-colorscheme/e-ink.nvim",
   {
     "anAcc22/sakura.nvim",
     dependencies = "rktjmp/lush.nvim",
