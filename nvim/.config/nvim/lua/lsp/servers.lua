@@ -35,4 +35,13 @@ return {
       },
     },
   },
+
+	clangd = {
+	  cmd = { "clangd" },
+	  filetypes = { "c", "cpp" },
+
+	  init_options = {
+	    clangdFileStatus = true,
+	  },
+	},
 }

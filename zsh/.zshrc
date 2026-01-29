@@ -63,7 +63,8 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 
-# -- # Aliases
+# ----- # Aliases
+
 # telegram app (path=home/Downloads/Telegram) 
 alias telegram="~/Downloads/Telegram/Telegram > /dev/null 2>&1 &"
 
@@ -73,7 +74,11 @@ alias dps='docker ps -a --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.
 # whonix
 alias whonix="~/Code/scripts/whonix/whonix-start.sh"
 
-# -- #
+# day-night theme changer alias
+# changing .config/alacritty/alacritty.toml 
+# and .config/nvim/lua/plugins/colorschemes.lua
+
+# ----- #
 
 
 # bun completions

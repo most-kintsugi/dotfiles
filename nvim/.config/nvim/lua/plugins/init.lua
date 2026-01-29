@@ -12,6 +12,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{ import = "plugins.editor" },
+	{ import = "plugins.indent" },
 	{ import = "plugins.colorschemes" },
 	{ import = "plugins.completion" },
 	{ import = "plugins.treesitter" },

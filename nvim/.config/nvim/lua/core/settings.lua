@@ -27,9 +27,9 @@ opt.ruler = true            -- show cursor position (set ruler)
 opt.foldcolumn = '2'        -- space on the left for code folding (set foldcolumn=2)
 opt.wrap = false            -- do not wrap lines (set nowrap)
 opt.colorcolumn = '80'      -- vertical line at 80 characters (set colorcolumn=80)
-opt.termguicolors = true		-- colors
+opt.termguicolors = true	-- colors
 opt.background = "dark"
-opt.signcolumn = "yes"				-- permanent column to prevent screen twitching
+opt.signcolumn = "yes"		-- permanent column to prevent screen twitching
 
 -- Searching
 opt.ignorecase = true       -- ignore case when searching (set ignorecase)
@@ -43,7 +43,7 @@ opt.encoding = 'utf8'       -- encoding (set encoding=utf8)
 opt.belloff = 'all'         -- turn off all sounds (set belloff=all)
 opt.splitright = true       -- :vs opens on the right (set splitright)
 opt.swapfile = false        -- do not use swap files (set noswapfile)
-opt.so=5										-- always put cursor at the center
+opt.so=5					-- always put cursor at the center
 
 -- disable auto commenting new lines
 cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]

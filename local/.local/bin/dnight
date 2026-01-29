@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -e
+
+MODE="$1"
+
+ALACRITTY="$HOME/.config/alacritty/alacritty.toml"
+NVIM="$HOME/.config/nvim/lua/plugins/colorschemes.lua"
+
+case "$MODE" in
+  day)
+    # alacritty
+    sed -i \
+      's|^import = .*|import = ["'"$HOME"'/.config/alacritty/themes/light/ayu_light.toml"]|' \
+      "$ALACRITTY"
+
+    # nvim
+    sed -i \
+      's|^local colorscheme = ".*"|local colorscheme = "kanso-pearl"|' \
+      "$NVIM"
+
+    echo "Day mode enabled"
+    ;;
+
+  night)
+    # alacritty
+    sed -i \
+      's|^import = .*|import = ["'"$HOME"'/.config/alacritty/themes/dark/aura.toml"]|' \
+      "$ALACRITTY"
+
+    # nvim
+    sed -i \
+      's|^local colorscheme = ".*"|local colorscheme = "kanso-mist"|' \
+      "$NVIM"
+
+    echo "Night mode enabled"
+    ;;
+
+  *)
+    echo "usage: daynight_changer.sh [day|night]"
+    exit 1
+    ;;
+esac
