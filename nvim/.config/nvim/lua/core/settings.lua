@@ -45,13 +45,44 @@ opt.splitright = true       -- :vs opens on the right (set splitright)
 opt.swapfile = false        -- do not use swap files (set noswapfile)
 opt.so=5					-- always put cursor at the center
 
--- disable auto commenting new lines
-cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 
--- two spaces for selected filetypes
-cmd [[
-autocmd FileType vue,conf,xml,html,xhtml,css,scss,javascript,lua,yaml,htmljinja setlocal shiftwidth=2 tabstop=2
-]]
+-- disable auto commenting new lines
+api.nvim_create_augroup("DisableAutoComment", { clear = true })
+
+api.nvim_create_autocmd("BufEnter", {
+  group = "DisableAutoComment",
+  callback = function()
+    vim.opt.formatoptions:remove({ "c", "r", "o" })
+  end,
+})
+
+-- ====================================================================
+-- Indentation rules per filetype
+-- ====================================================================
+api.nvim_create_augroup("IndentRules", { clear = true })
+
+api.nvim_create_autocmd("FileType", {
+  group = "IndentRules",
+  pattern = {
+    "vue",
+    "conf",
+    "xml",
+    "html",
+    "xhtml",
+    "css",
+    "scss",
+    "javascript",
+    "lua",
+    "yaml",
+    "htmljinja",
+  },
+  callback = function()
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+    vim.bo.softtabstop = 2
+    vim.bo.expandtab = true
+  end,
+})
 
 -- ====================================================================
 -- Autocmds (Automatic Commands)
@@ -72,4 +103,3 @@ api.nvim_create_autocmd({"FocusLost", "InsertEnter"}, {
     opt.relativenumber = false
   end
 })
-

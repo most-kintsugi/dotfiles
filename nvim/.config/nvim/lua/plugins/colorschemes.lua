@@ -1,7 +1,7 @@
 -- lua/plugins/colorschemes.lua
 
 
-local colorscheme = "tokusa"
+local colorscheme = "kanagawa"
 
 return {
   {
