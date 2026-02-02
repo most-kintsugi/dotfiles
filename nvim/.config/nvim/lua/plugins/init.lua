@@ -10,11 +10,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local mode = require("core.mode")
+
 require("lazy").setup({
 	{ import = "plugins.editor" },
 	{ import = "plugins.indent" },
 	{ import = "plugins.colorschemes" },
 	{ import = "plugins.completion" },
 	{ import = "plugins.treesitter" },
-	{ import = "plugins.lsp" },
+	mode.lsp and { import = "plugins.lsp" } or nil,
 })

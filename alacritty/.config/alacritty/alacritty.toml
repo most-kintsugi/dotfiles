@@ -5,7 +5,7 @@ import = ["/home/kintsugi/.config/alacritty/themes/dark/aura.toml"]
 
 # Cascadia
 [font]
-size = 16
+size = 18
 normal = { family = "Cascadia Code NF", style = "Regular" }
 bold = { family = "Cascadia Code NF", style = "Bold" }
 italic = { family = "Cascadia Code NF", style = "Italic" }

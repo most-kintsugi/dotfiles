@@ -1,7 +1,9 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+local mode = require("core.mode")
+
 require('core.settings')
 require('core.keymaps')
 require('plugins')
 
-require('lsp').setup()
+if mode.lsp then
+  require('lsp').setup()
+end

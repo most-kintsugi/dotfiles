@@ -22,7 +22,6 @@ return {
         },
         columns = { "icon", "size" },
       })
-		
       vim.keymap.set(
         "n",
         "-",
@@ -47,44 +46,6 @@ return {
       backends = { "lsp", "treesitter" },
       show_guides = true,
       filter_kind = false,
-    },
-  },
-
-  -- File tree explorer
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    opts = {
-      filesystem = {
-        follow_current_file = {
-          enabled = true,
-        },
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = true,
-
-		  hide_by_name = {
-			  "build",
-			  "dist",
-		  },
-
-		  hide_by_pattern = {
-			  "*.o",
-			  "*.a",
-			  "*.so",
-			  "*.out",
-		  },
-        },
-      },
-      window = {
-        position = "left",
-        width = 24,
-      },
     },
   },
 }
