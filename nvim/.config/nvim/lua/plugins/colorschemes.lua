@@ -1,7 +1,7 @@
 -- lua/plugins/colorschemes.lua
 
 
-local colorscheme = "sakura"
+local colorscheme = "kanagawa"
 
 return {
   {
@@ -21,8 +21,9 @@ return {
   "savq/melange-nvim",
   "e-ink-colorscheme/e-ink.nvim",
   "olimorris/onedarkpro.nvim",
-	"KKPMW/distilled-vim",
-	"aidyak/tokusa",
+  "KKPMW/distilled-vim",
+  "aidyak/tokusa",
+  "utakotoba/myrrh.nvim",
   {
     "anAcc22/sakura.nvim",
     dependencies = "rktjmp/lush.nvim",

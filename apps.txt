@@ -8,6 +8,8 @@ Firefox:
 		privacy
 		[about:config]
 			ui.key.menuAccessKeyFocuses = false
+			[for not lagging with KDE+Nvidia]
+			layers.acceleration.disabled = true
 	bookmarks:
 		gmail
 		bitwarden
@@ -20,3 +22,11 @@ Firefox:
 		vimium !!
 
 Hiddyfi
+
+
+KDE DESKTOP if freezing:
+/etc/default/grub: 
+    GRUB_CMDLINE_LINUX_DEFAULT="quiet nvidia-drm.modeset=0"
+bash:
+	systemctl --user stop plasma-powerdevil.service
+	systemctl --user disable plasma-powerdevil.service

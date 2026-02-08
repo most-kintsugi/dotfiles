@@ -14,6 +14,7 @@ local mode = require("core.mode")
 
 require("lazy").setup({
 	{ import = "plugins.editor" },
+  { import = "plugins.ui" },
 	{ import = "plugins.indent" },
 	{ import = "plugins.colorschemes" },
 	{ import = "plugins.completion" },

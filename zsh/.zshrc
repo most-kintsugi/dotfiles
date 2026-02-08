@@ -57,6 +57,7 @@ HISTORY_IGNORE_PATTERN=(
 
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
 
 # Sudoedit 
 export EDITOR="nvim"
