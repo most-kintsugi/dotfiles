@@ -62,9 +62,9 @@ return {
       })
 
       -- buffer navigation
-      vim.keymap.set("n", "<A-i>", "<Cmd>BufferPrevious<CR>", { silent = true })
-      vim.keymap.set("n", "<A-o>", "<Cmd>BufferNext<CR>", { silent = true })
-      vim.keymap.set("n", "<A-q>", "<Cmd>BufferClose<CR>", { silent = true })
+      vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferPrevious<CR>", { silent = true })
+      vim.keymap.set("n", "<Tab>", "<Cmd>BufferNext<CR>", { silent = true })
+      vim.keymap.set("n", "<S-q>", "<Cmd>BufferClose<CR>", { silent = true })
     end,
   },
 

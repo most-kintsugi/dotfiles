@@ -57,7 +57,7 @@ return {
       },
     },
   },
-  tsserver = {
+  ts_ls = {
     cmd = { "typescript-language-server", "--stdio" },
     filetypes = {
       "javascript",
