@@ -20,7 +20,7 @@ map('i', '<F11>', '<C-O>:set spell!<CR>', default_opts)
 -- PLUGINS --
 
 -- Aerial (code outline)
-map('n', '<leader>a', ':AerialToggle<CR>', default_opts)
+map('n', '<A-a>', ':AerialToggle<CR>', default_opts)
 map('n', '[a', ':AerialPrev<CR>', default_opts)
 map('n', ']a', ':AerialNext<CR>', default_opts)
 

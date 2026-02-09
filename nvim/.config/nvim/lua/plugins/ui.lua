@@ -29,13 +29,13 @@ return {
       -- toggle tree visibility
       vim.keymap.set(
         "n",
-        "<A-e>",
+        "<S-e>",
         "<Cmd>Neotree toggle filesystem<CR>",
         { silent = true }
       )
 
       -- jump between code <-> tree without closing
-      vim.keymap.set("n", "<A-w>", function()
+      vim.keymap.set("n", "<S-w>", function()
         if vim.bo.filetype == "neo-tree" then
           vim.cmd("wincmd p")
         else
