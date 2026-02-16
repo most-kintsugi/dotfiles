@@ -30,3 +30,6 @@ KDE DESKTOP if freezing:
 bash:
 	systemctl --user stop plasma-powerdevil.service
 	systemctl --user disable plasma-powerdevil.service
+
+keyboard:
+	300ms, 25 repeats
