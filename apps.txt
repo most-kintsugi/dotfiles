@@ -23,13 +23,11 @@ Firefox:
 
 Hiddyfi
 
+xfce
+	arc theme
+	papirus icons
 
-KDE DESKTOP if freezing:
-/etc/default/grub: 
-    GRUB_CMDLINE_LINUX_DEFAULT="quiet nvidia-drm.modeset=0"
-bash:
-	systemctl --user stop plasma-powerdevil.service
-	systemctl --user disable plasma-powerdevil.service
+Throne vpn
 
 keyboard:
 	300ms, 25 repeats
