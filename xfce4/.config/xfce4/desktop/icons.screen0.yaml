@@ -15,28 +15,31 @@ configs:
     "trash:///":
       row: 8
       col: 0
-    "/home/kintsugi/Desktop/Chrome.desktop":
-      row: 2
+    "/":
+      row: 1
       col: 0
     "/home/kintsugi/Desktop/Firefox ESR.desktop":
       row: 6
-      col: 0
-    "/home/kintsugi":
-      row: 0
       col: 0
     "6044F35B44F33280":
       row: 5
       col: 0
       last_seen: 1770450555949813
-    "4EC2F054C2F041AF":
-      row: 3
+    "/home/kintsugi":
+      row: 0
       col: 0
-      last_seen: 1770450555947683
     "/home/kintsugi/Desktop/kitty.desktop":
       row: 0
       col: 1
     "/home/kintsugi/Desktop/Hiddify.desktop":
       row: 3
+      col: 0
+    "4EC2F054C2F041AF":
+      row: 3
+      col: 0
+      last_seen: 1770450555947683
+    "/home/kintsugi/Desktop/Chrome.desktop":
+      row: 2
       col: 0
     "80BAF1E2BAF1D49E":
       row: 4
@@ -44,7 +47,4 @@ configs:
       last_seen: 1770450555948803
     "/home/kintsugi/Desktop/.directory":
       row: 6
-      col: 0
-    "/":
-      row: 1
       col: 0
