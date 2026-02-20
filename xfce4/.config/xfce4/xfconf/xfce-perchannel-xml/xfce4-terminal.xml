@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-terminal" version="1.0">
-  <property name="font-name" type="string" value="Cascadia Mono 16"/>
+  <property name="font-name" type="string" value="Nimbus Mono PS 16"/>
   <property name="color-foreground" type="string" value="#dcdcdc"/>
   <property name="color-background" type="string" value="#2c2c2c"/>
   <property name="color-background-vary" type="bool" value="false"/>

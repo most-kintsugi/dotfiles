@@ -19,7 +19,6 @@
         <value type="int" value="3"/>
         <value type="int" value="21"/>
         <value type="int" value="2"/>
-        <value type="int" value="16"/>
         <value type="int" value="20"/>
         <value type="int" value="4"/>
         <value type="int" value="22"/>
@@ -29,6 +28,7 @@
         <value type="int" value="6"/>
         <value type="int" value="8"/>
         <value type="int" value="15"/>
+        <value type="int" value="11"/>
         <value type="int" value="18"/>
         <value type="int" value="23"/>
         <value type="int" value="1"/>
@@ -56,6 +56,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-items" type="array">
+        <value type="string" value="blueman"/>
         <value type="string" value="Throne"/>
         <value type="string" value="T5so5_ac8l"/>
         <value type="string" value="vjnRGi3MZt"/>
@@ -222,8 +223,9 @@
     </property>
     <property name="plugin-17" type="string" value="whiskermenu">
       <property name="recent" type="array">
-        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce4-terminal.desktop"/>
         <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="xfce4-appfinder.desktop"/>
         <value type="string" value="xfce-workspaces-settings.desktop"/>
       </property>
@@ -255,14 +257,14 @@
         <value type="string" value="17714258761.desktop"/>
       </property>
     </property>
-    <property name="plugin-16" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="17714283672.desktop"/>
-      </property>
-    </property>
     <property name="plugin-18" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="known-players" type="string" value="firefox-esr;org.telegram.desktop._fd38f5b0bc68c9fb193273eb063f0fdd"/>
+    </property>
+    <property name="plugin-11" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17716253561.desktop"/>
+      </property>
     </property>
   </property>
 </channel>

@@ -25,14 +25,14 @@
       </property>
       <property name="monitorHDMI-0" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/kintsugi/Pictures/lain_wallpaper_XP.jpg"/>
-          <property name="image-style" type="int" value="3"/>
-          <property name="color-style" type="int" value="3"/>
+          <property name="last-image" type="string" value="/home/kintsugi/Pictures/sakura_sakura.jpg"/>
+          <property name="image-style" type="int" value="1"/>
+          <property name="color-style" type="int" value="0"/>
           <property name="backdrop-cycle-enable" type="bool" value="false"/>
           <property name="rgba1" type="array">
-            <value type="double" value="0"/>
-            <value type="double" value="0"/>
-            <value type="double" value="0"/>
+            <value type="double" value="0.046666666666666669"/>
+            <value type="double" value="0.0059111111111111083"/>
+            <value type="double" value="0.0059111111111111083"/>
             <value type="double" value="1"/>
           </property>
           <property name="rgba2" type="array">

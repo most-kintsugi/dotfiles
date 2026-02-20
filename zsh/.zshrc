@@ -69,7 +69,7 @@ export VISUAL="nvim"
 # ----- # Aliases
 
 # telegram app (path=home/Downloads/Telegram) 
-alias telegram="~/Downloads/Telegram/Telegram > /dev/null 2>&1 &"
+alias telegram="~/Apps/Telegram/Telegram > /dev/null 2>&1 &"
 
 # short-formed [docker ps] command
 alias dps='docker ps -a --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
@@ -77,9 +77,7 @@ alias dps='docker ps -a --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.
 # whonix
 alias whonix="~/Code/scripts/whonix/whonix-start.sh"
 
-# day-night theme changer alias
-# changing .config/alacritty/alacritty.toml 
-# and .config/nvim/lua/plugins/colorschemes.lua
+alias nvim-write="NVIM_APPNAME=nvim_write nvim"
 
 # ----- #
 
