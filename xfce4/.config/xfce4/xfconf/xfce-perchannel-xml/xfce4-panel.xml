@@ -18,7 +18,6 @@
         <value type="int" value="19"/>
         <value type="int" value="3"/>
         <value type="int" value="21"/>
-        <value type="int" value="2"/>
         <value type="int" value="20"/>
         <value type="int" value="4"/>
         <value type="int" value="22"/>
@@ -209,9 +208,14 @@
       <property name="show-labels" type="bool" value="false"/>
       <property name="show-handle" type="bool" value="false"/>
       <property name="show-tooltips" type="bool" value="false"/>
-      <property name="sort-order" type="uint" value="1"/>
+      <property name="sort-order" type="uint" value="0"/>
       <property name="grouping" type="bool" value="false"/>
       <property name="switch-workspace-on-unminimize" type="bool" value="true"/>
+      <property name="window-scrolling" type="bool" value="true"/>
+      <property name="show-wireframes" type="bool" value="false"/>
+      <property name="include-all-workspaces" type="bool" value="false"/>
+      <property name="show-only-minimized" type="bool" value="false"/>
+      <property name="include-all-monitors" type="bool" value="true"/>
     </property>
     <property name="plugin-15" type="string" value="xkb">
       <property name="display-type" type="uint" value="2"/>
@@ -223,11 +227,16 @@
     </property>
     <property name="plugin-17" type="string" value="whiskermenu">
       <property name="recent" type="array">
+        <value type="string" value="org.telegram.desktop._fd38f5b0bc68c9fb193273eb063f0fdd.desktop"/>
+        <value type="string" value="org.pwmt.zathura.desktop"/>
+        <value type="string" value="org.gnome.Evince.desktop"/>
+        <value type="string" value="virtualbox.desktop"/>
+        <value type="string" value="xfce4-screenshooter.desktop"/>
+        <value type="string" value="org.kde.ghostwriter.desktop"/>
+        <value type="string" value="xfce4-screensaver-preferences.desktop"/>
         <value type="string" value="xfce4-terminal.desktop"/>
         <value type="string" value="xfce-wm-settings.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="xfce4-appfinder.desktop"/>
-        <value type="string" value="xfce-workspaces-settings.desktop"/>
       </property>
       <property name="view-mode" type="int" value="1"/>
       <property name="launcher-show-name" type="bool" value="true"/>
@@ -240,6 +249,13 @@
       <property name="profile-shape" type="int" value="0"/>
       <property name="position-categories-horizontal" type="bool" value="false"/>
       <property name="position-categories-alternate" type="bool" value="false"/>
+      <property name="favorites" type="array">
+        <value type="string" value="org.telegram.desktop._fd38f5b0bc68c9fb193273eb063f0fdd.desktop"/>
+        <value type="string" value="virtualbox.desktop"/>
+        <value type="string" value="org.gnome.Evince.desktop"/>
+        <value type="string" value="org.kde.ghostwriter.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
+      </property>
     </property>
     <property name="plugin-20" type="string" value="separator"/>
     <property name="plugin-21" type="string" value="directorymenu">
@@ -251,11 +267,6 @@
     <property name="plugin-1" type="string" value="actions">
       <property name="appearance" type="uint" value="1"/>
       <property name="button-title" type="uint" value="1"/>
-    </property>
-    <property name="plugin-2" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="17714258761.desktop"/>
-      </property>
     </property>
     <property name="plugin-18" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>

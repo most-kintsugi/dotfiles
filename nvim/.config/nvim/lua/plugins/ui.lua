@@ -22,7 +22,7 @@ return {
           hijack_netrw_behavior = "open_default",
         },
         window = {
-          width = 50,
+          width = 30,
         },
       })
 

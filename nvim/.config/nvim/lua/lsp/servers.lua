@@ -89,4 +89,10 @@ return {
     },
   },
 
+  html_ls = {
+    cmd = { "vscode-html-language-server", "--stdio" },
+    filetypes = { "html" },
+    settings = {},
+  },
+
 }

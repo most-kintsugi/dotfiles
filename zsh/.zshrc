@@ -54,12 +54,12 @@ HISTORY_IGNORE_PATTERN=(
 )
 # -- -- 
 
-
-
-
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/cross-compiler/install/bin:$PATH"
+
+export LIBVIRT_DEFAULT_URI=qemu:///system
 
 # Sudoedit 
 export EDITOR="nvim"

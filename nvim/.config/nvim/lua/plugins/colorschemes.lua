@@ -1,7 +1,7 @@
 -- lua/plugins/colorschemes.lua
 
 
-local colorscheme = "kanagawa"
+local colorscheme = "melange"
 
 return {
   {
