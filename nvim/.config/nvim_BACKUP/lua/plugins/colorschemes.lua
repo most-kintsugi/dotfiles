@@ -9,7 +9,7 @@ return {
 	 lazy = false,
 	 priority = 1000,
   	 config = function()
-	   vim.cmd.colorscheme(colorscheme)
+	   vim.cmd("colorscheme " .. colorscheme)
   	 end,
   },
 

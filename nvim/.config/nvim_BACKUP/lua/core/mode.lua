@@ -1,5 +1,5 @@
 local M = {}
 
-M.lsp = true 
+M.lsp = true
 
 return M
