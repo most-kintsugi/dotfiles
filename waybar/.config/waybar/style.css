@@ -1,0 +1,122 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    min-height: 0;
+}
+
+/* =========================
+   WAYBAR BACKGROUND FIX
+   ========================= */
+
+window#waybar {
+    background: transparent;
+}
+
+/* =========================
+   MAIN CONTAINERS
+   ========================= */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(30, 30, 30, 0.85);
+
+    margin-top: 6px;
+    margin-bottom: 0px;
+
+    padding: 6px 12px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* hover */
+.modules-left:hover,
+.modules-center:hover,
+.modules-right:hover {
+    background: rgba(40, 40, 40, 0.90);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   MODULES BASE STYLE
+   ========================= */
+
+#clock,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#tray,
+#custom-battery_state,
+#language {
+    padding: 0 10px;
+    color: #eaeaea;
+}
+
+/* =========================
+   STABILITY (NO JITTER)
+   ========================= */
+
+#clock {
+    min-width: 150px;
+}
+
+#cpu {
+    min-width: 70px;
+}
+
+#temperature {
+    min-width: 40px;
+}
+
+#memory {
+    min-width: 70px;
+}
+
+#pulseaudio {
+    min-width: 70px;
+}
+
+#language {
+    min-width: 24px;
+}
+
+#custom-battery_state {
+    min-width: 30px;
+}
+
+/* =========================
+   WORKSPACES
+   ========================= */
+
+#workspaces button {
+    color: #777;
+    padding: 2px 8px;
+    margin: 0 2px;
+    border-radius: 6px;
+
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+#workspaces button:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   TRAY
+   ========================= */
+
+#tray {
+    padding: 0 8px;
+    opacity: 0.9;
+}

@@ -1,6 +1,6 @@
 [general]
 
-import = ["/home/kintsugi/.config/alacritty/themes/dark/aura.toml"]
+import = ["/home/player/.config/alacritty/themes/dark/aura.toml"]
 
 
 # Cascadia
@@ -27,10 +27,10 @@ import = ["/home/kintsugi/.config/alacritty/themes/dark/aura.toml"]
 # Jet Brains 
 [font]
 size = 14.5
-normal = { family = "JetBrains Mono", style = "Regular" }
-bold = { family = "JetBrains Mono", style = "Bold" }
-italic = { family = "JetBrains Mono", style = "Italic" }
-bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
+normal = { family = "JetBrains Mono Nerd Font Mono", style = "Regular" }
+bold = { family = "JetBrains Mono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrains Mono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "JetBrains Mono Nerd Font Mono", style = "Bold Italic" }
 offset = { x = 0, y = 0 }
 glyph_offset = { x = 0, y = 0 }
 

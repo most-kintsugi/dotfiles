@@ -21,13 +21,8 @@ Firefox:
 		dark reader
 		vimium !!
 
-Hiddyfi
-
 xfce
 	arc theme
 	papirus icons
 
 Throne vpn
-
-keyboard:
-	300ms, 25 repeats

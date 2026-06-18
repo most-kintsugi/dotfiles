@@ -1,7 +1,7 @@
 -- lua/plugins/colorschemes.lua
 
 
-local colorscheme = "onedark"
+local colorscheme = "dawnfox"
 
 return {
   {
@@ -14,7 +14,6 @@ return {
   },
 
   "rebelot/kanagawa.nvim",
-  "nanotech/jellybeans.vim",
   "nikolvs/vim-sunbather",
   "hardselius/warlock",
   "EdenEast/nightfox.nvim",

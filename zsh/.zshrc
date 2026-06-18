@@ -1,7 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR="nvim"
 
-ZSH_THEME="arrow"
+ZSH_THEME="nicoulaj"
 
 plugins=(
 	# default
@@ -57,7 +56,6 @@ HISTORY_IGNORE_PATTERN=(
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/cross-compiler/install/bin:$PATH"
 
 export LIBVIRT_DEFAULT_URI=qemu:///system
 
@@ -66,25 +64,10 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 
-# ----- # Aliases
-
-# telegram app (path=home/Downloads/Telegram) 
-alias telegram="~/Apps/Telegram/Telegram > /dev/null 2>&1 &"
-
-# short-formed [docker ps] command
-alias dps='docker ps -a --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
-
-# whonix
-alias whonix="~/Code/scripts/whonix/whonix-start.sh"
-
-alias nvim-write="NVIM_APPNAME=nvim_write nvim"
-
-# ----- #
-
-
 # bun completions
-[ -s "/home/kintsugi/.bun/_bun" ] && source "/home/kintsugi/.bun/_bun"
-
-# bun
+[ -s "/home/player/.bun/_bun" ] && source "/home/player/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

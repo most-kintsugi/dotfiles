@@ -1,0 +1,72 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 44,
+    "spacing": 1,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock",
+    ],
+
+    "modules-right": [
+        "cpu",
+        "temperature",
+        "memory",
+        "pulseaudio",
+        "custom/battery_state",
+		"hyprland/language",
+        "tray"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+
+    "clock": {
+		"format": "{:%d.%m.%Y  %H:%M}",
+        "tooltip-format": "{:%A %d %B %Y}"
+    },
+
+    "cpu": {
+        "format": "CPU {usage}%",
+		"tooltip": true,
+        "interval": 2
+    },
+
+    "temperature": {
+        "exec": "sensors k10temp-pci-00c3 | awk '/Tctl/ {print $2}'",
+        "format": " {}°C"
+    },
+
+    "memory": {
+        "format": "RAM {used}G",
+		"tooltip": true,
+        "interval": 2
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        }
+    },
+
+    "custom/battery_state": {
+		"exec": "~/.config/waybar/scripts/battery.sh",
+		"interval": 2,
+		"return-type": "json"
+    },
+
+	"hyprland/language": {
+		"format": "{shortDescription}"
+	},
+
+    "tray": {
+        "spacing": 10
+    }
+}
