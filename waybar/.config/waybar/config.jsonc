@@ -17,6 +17,7 @@
         "temperature",
         "memory",
         "pulseaudio",
+		"custom/network",
         "custom/battery_state",
 		"hyprland/language",
         "tray"
@@ -55,6 +56,13 @@
             "default": [" ", " ", " "]
         }
     },
+
+	"custom/network": {
+		"exec": "~/.config/waybar/scripts/network.sh",
+    	"interval": 3,
+    	"return-type": "json",
+    	"on-click": "networkmanager_dmenu"
+	},
 
     "custom/battery_state": {
 		"exec": "~/.config/waybar/scripts/battery.sh",
