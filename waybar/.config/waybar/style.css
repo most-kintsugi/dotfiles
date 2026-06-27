@@ -1,7 +1,7 @@
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Inter";
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     border: none;
     min-height: 0;
 }
@@ -23,7 +23,7 @@ window#waybar {
 .modules-right {
     background: rgba(30, 30, 30, 0.85);
 
-    margin-top: 6px;
+    margin-top: 10px;
     margin-bottom: 0px;
 
     padding: 6px 12px;
@@ -74,7 +74,7 @@ window#waybar {
 }
 
 #memory {
-    min-width: 70px;
+    min-width: 100px;
 }
 
 #pulseaudio {
@@ -91,7 +91,7 @@ window#waybar {
 }
 
 #custom-battery_state {
-    min-width: 30px;
+    min-width: 70px;
 }
 
 /* =========================

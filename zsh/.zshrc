@@ -3,7 +3,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="nicoulaj"
 
 plugins=(
-	# default
 	git
 	z
 	sudo
@@ -13,20 +12,25 @@ plugins=(
 	fzf
 	fzf-tab
 
-	#highlighting
 	zsh-syntax-highlighting
+	# zsh-autosuggestions
+	zsh-history-substring-search
 
 )
 source $ZSH/oh-my-zsh.sh
+
+
 bindkey '^R' fzf-history-widget
 
 export FZF_CTRL_R_OPTS="
   --reverse
-  --preview 'echo {}'
-  --preview-window down:3:wrap
   --height 40%
+  --layout=reverse
+  --border
+  --ansi
+  --preview 'echo {}'
+  --preview-window=hidden
 "
-
 
 # Remove duplicates from history
 setopt HIST_IGNORE_ALL_DUPS

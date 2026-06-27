@@ -61,6 +61,14 @@ api.nvim_create_autocmd("BufEnter", {
 -- ====================================================================
 api.nvim_create_augroup("IndentRules", { clear = true })
 
+local function set_indent_2()
+  vim.bo.shiftwidth = 2
+  vim.bo.tabstop = 2
+  vim.bo.softtabstop = 2
+  vim.bo.expandtab = true
+end
+
+-- FileType (Main source)
 api.nvim_create_autocmd("FileType", {
   group = "IndentRules",
   pattern = {
@@ -72,18 +80,34 @@ api.nvim_create_autocmd("FileType", {
     "css",
     "scss",
     "javascript",
+    "typescript",
+    "typescriptreact",
     "lua",
     "yaml",
     "htmljinja",
   },
-  callback = function()
-    vim.bo.shiftwidth = 2
-    vim.bo.tabstop = 2
-    vim.bo.softtabstop = 2
-    vim.bo.expandtab = true
-  end,
+  callback = set_indent_2,
 })
 
+-- BufWinEnter (callback against LSP/ftplugin)
+api.nvim_create_autocmd("BufWinEnter", {
+  group = "IndentRules",
+  pattern = {
+    "*.vue",
+    "*.conf",
+    "*.xml",
+    "*.html",
+    "*.xhtml",
+    "*.css",
+    "*.scss",
+    "*.js",
+    "*.ts",
+    "*.tsx",
+    "*.lua",
+    "*.yaml",
+  },
+  callback = set_indent_2,
+})
 -- ====================================================================
 -- Autocmds (Automatic Commands)
 -- ====================================================================

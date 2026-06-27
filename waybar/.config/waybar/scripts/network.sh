@@ -20,7 +20,7 @@ iface=$(ip route | awk '/default/ {print $5; exit}')
 
 # ===== NO CONNECTION =====
 if [ -z "$iface" ]; then
-    echo '{"text":"󰤮 offline","class":"disconnected"}'
+    echo '{"text":"󰤮  offline","class":"disconnected"}'
     exit
 fi
 
@@ -35,7 +35,7 @@ fi
 ssid=$(nmcli -t -f active,ssid dev wifi | awk -F: '$1=="yes"{print $2; exit}')
 
 if [ -z "$ssid" ]; then
-    echo '{"text":"󰤨 no-wifi","class":"wifi-disconnected"}'
+    echo '{"text":"󰤨  no-wifi","class":"wifi-disconnected"}'
     exit
 fi
 
@@ -43,7 +43,7 @@ ssid_short=$(truncate "$ssid" 12)
 
 # ===== INTERNET CHECK =====
 if check_internet; then
-    echo "{\"text\":\"󰤨 $ssid_short\",\"class\":\"wifi-connected\"}"
+    echo "{\"text\":\"󰤨  $ssid_short\",\"class\":\"wifi-connected\"}"
 else
     echo '{"text":"󰤨 no-net","class":"wifi-no-internet"}'
 fi

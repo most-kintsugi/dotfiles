@@ -1,7 +1,7 @@
 -- lua/plugins/colorschemes.lua
 
 
-local colorscheme = "dawnfox"
+local colorscheme = "kanagawa"
 
 return {
   {

@@ -12,21 +12,40 @@ if [[ -n "$ac_path" ]]; then
     online=$(cat "/sys/class/power_supply/$ac_path/online" 2>/dev/null)
 fi
 
-icon=""
-
-# icon logic
-
-# charging while plugged in
-if [[ "$online" == "1" && "$status" == "Charging" ]]; then
-    icon="󰂄"   # charging
-
-# plugged in, not charging
-elif [[ "$online" == "1" ]]; then
-    icon="󰁹"   # plugged
-
-# running on battery
+# Battery icon based on charge level
+if [[ $capacity -ge 95 ]]; then
+    battery_icon=""
+elif [[ $capacity -ge 70 ]]; then
+    battery_icon=""
+elif [[ $capacity -ge 45 ]]; then
+    battery_icon=""
+elif [[ $capacity -ge 20 ]]; then
+    battery_icon=""
 else
-    icon="󰂀"   # discharging
+    battery_icon=""
 fi
 
-echo "{\"text\": \"$icon $capacity%\", \"tooltip\": \"$capacity% ($status)\"}"
+
+remaining_time=""
+
+if [[ "$online" != "1" ]]; then
+    energy_now=$(cat "$battery/energy_now")
+    power_now=$(cat "$battery/power_now")
+
+    if [[ "$power_now" -gt 0 ]]; then
+        hours=$(( energy_now / power_now ))
+        minutes=$(( (energy_now * 60 / power_now) % 60 ))
+        remaining_time="$hours h $minutes min"
+    fi
+fi
+
+# Build display text
+if [[ "$online" == "1" ]]; then
+    text="$battery_icon  󰚥 $capacity%"
+    tooltip="Connected to AC power ($capacity%)"
+else
+    text="$battery_icon   $capacity%"
+    tooltip="$remaining_time remaining"
+fi
+# Output JSON for Waybar
+echo "{\"text\": \"$text\", \"tooltip\": \"$tooltip\"}"

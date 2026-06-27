@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 44,
+    "height": 46,
     "spacing": 1,
 
     "modules-left": [
@@ -9,7 +9,7 @@
     ],
 
     "modules-center": [
-        "clock",
+        "clock"
     ],
 
     "modules-right": [
@@ -17,7 +17,6 @@
         "temperature",
         "memory",
         "pulseaudio",
-		"custom/network",
         "custom/battery_state",
 		"hyprland/language",
         "tray"
@@ -53,7 +52,7 @@
         "format": "{icon} {volume}%",
         "format-muted": "󰝟",
         "format-icons": {
-            "default": [" ", " ", " "]
+            "default": [" ", " ", "  "]
         }
     },
 
@@ -75,6 +74,6 @@
 	},
 
     "tray": {
-        "spacing": 10
+        "spacing": 13
     }
 }
