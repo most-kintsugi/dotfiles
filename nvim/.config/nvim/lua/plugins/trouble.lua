@@ -5,16 +5,14 @@ return {
     cmd = "Trouble",
     keys = {
       {
-        "<A-d>",
+        "<leader>xd",
         "<Cmd>Trouble diagnostics toggle<CR>",
-        silent = true,
-        desc = "Toggle Trouble diagnostics",
+        desc = "Diagnostics",
       },
       {
-        "<A-D>",
+        "<leader>xl",
         "<Cmd>Trouble loclist toggle<CR>",
-        silent = true,
-        desc = "Toggle Trouble loclist",
+        desc = "Location List",
       },
     },
     opts = {},

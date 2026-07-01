@@ -6,23 +6,30 @@ return {
       local hooks = require("ibl.hooks")
 
       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+
         vim.api.nvim_set_hl(0, "IblIndent", {
-          fg = "#3a3a3a",
+          fg = "#3b4252",
           nocombine = true,
         })
+
         vim.api.nvim_set_hl(0, "IblScope", {
-          fg = "#505050",
+          fg = "#4c566a",
           nocombine = true,
         })
       end)
 
       require("ibl").setup({
         indent = {
-          char = "⋅",
+          char = "▏",
+          -- char = "│",
+          -- char = "∘",
+
+
           highlight = "IblIndent",
         },
         scope = {
-          enabled = false,
+          enabled = true,
+          highlight = "IblScope",
         },
         whitespace = {
           remove_blankline_trail = true,
@@ -38,5 +45,5 @@ return {
         },
       })
     end,
-  }
+  },
 }

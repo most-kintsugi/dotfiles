@@ -43,8 +43,10 @@ opt.encoding = 'utf8'       -- encoding (set encoding=utf8)
 opt.belloff = 'all'         -- turn off all sounds (set belloff=all)
 opt.splitright = true       -- :vs opens on the right (set splitright)
 opt.swapfile = false        -- do not use swap files (set noswapfile)
-opt.so=5					-- always put cursor at the center
+opt.so=5					          -- always put cursor at the center
 
+-- Spell checking (multilingual)
+opt.spelllang = { "en", "ru" }  -- enable English + Russian spell checking
 
 -- disable auto commenting new lines
 api.nvim_create_augroup("DisableAutoComment", { clear = true })
@@ -59,55 +61,40 @@ api.nvim_create_autocmd("BufEnter", {
 -- ====================================================================
 -- Indentation rules per filetype
 -- ====================================================================
-api.nvim_create_augroup("IndentRules", { clear = true })
+local indent_ft = {
+  vue = true,
+  conf = true,
+  xml = true,
+  html = true,
+  xhtml = true,
+  css = true,
+  scss = true,
+  javascript = true,
+  typescript = true,
+  typescriptreact = true,
+  lua = true,
+  yaml = true,
+  htmljinja = true,
+  markdown = true,
+}
 
-local function set_indent_2()
+local function apply_indent()
   vim.bo.shiftwidth = 2
   vim.bo.tabstop = 2
   vim.bo.softtabstop = 2
   vim.bo.expandtab = true
 end
 
--- FileType (Main source)
-api.nvim_create_autocmd("FileType", {
-  group = "IndentRules",
-  pattern = {
-    "vue",
-    "conf",
-    "xml",
-    "html",
-    "xhtml",
-    "css",
-    "scss",
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "lua",
-    "yaml",
-    "htmljinja",
-  },
-  callback = set_indent_2,
+local function maybe_apply()
+  if indent_ft[vim.bo.filetype] then
+    apply_indent()
+  end
+end
+
+vim.api.nvim_create_autocmd({ "FileType", "BufEnter" }, {
+  callback = maybe_apply,
 })
 
--- BufWinEnter (callback against LSP/ftplugin)
-api.nvim_create_autocmd("BufWinEnter", {
-  group = "IndentRules",
-  pattern = {
-    "*.vue",
-    "*.conf",
-    "*.xml",
-    "*.html",
-    "*.xhtml",
-    "*.css",
-    "*.scss",
-    "*.js",
-    "*.ts",
-    "*.tsx",
-    "*.lua",
-    "*.yaml",
-  },
-  callback = set_indent_2,
-})
 -- ====================================================================
 -- Autocmds (Automatic Commands)
 -- ====================================================================
