@@ -14,8 +14,9 @@ return {
       wk.setup(opts)
 
       wk.add({
-        { "<leader>x", group = "Trouble" },
+        { "<leader>d", group = "Trouble" },
         { "<leader>f", group = "Find" },
+        { "<leader>c", group = "Code" },
       })
     end,
   },

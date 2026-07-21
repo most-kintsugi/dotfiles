@@ -58,10 +58,22 @@ return {
     },
   },
 
-  html_ls = {
-    cmd = { "vscode-html-language-server", "--stdio" },
-    filetypes = { "html" },
+  -- html_ls = {
+  --   cmd = { "vscode-html-language-server", "--stdio" },
+  --   filetypes = { "html" },
+  --   settings = {},
+  -- },
+
+  typescript_language_server = {
+    cmd = { "typescript-language-server", "--stdio" },
+
+    filetypes = {
+      "typescript",
+      "typescriptreact",
+      "javascript",
+      "javascriptreact",
+    },
+
     settings = {},
   },
-
 }

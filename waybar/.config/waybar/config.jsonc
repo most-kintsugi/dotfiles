@@ -23,7 +23,7 @@
         "memory",
         "pulseaudio",
         "custom/battery_state",
-		"hyprland/language",
+    		"hyprland/language",
         "tray"
     ],
 
@@ -32,7 +32,7 @@
     },
 
     "clock": {
-		"format": "{:%d.%m.%Y  %H:%M}",
+		"format": "{:%Y.%m.%d %H:%M}",
         "tooltip-format": "{:%A %d %B %Y}"
     },
 

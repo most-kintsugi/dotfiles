@@ -5,14 +5,9 @@ return {
     cmd = "Trouble",
     keys = {
       {
-        "<leader>xd",
+        "<leader>d",
         "<Cmd>Trouble diagnostics toggle<CR>",
         desc = "Diagnostics",
-      },
-      {
-        "<leader>xl",
-        "<Cmd>Trouble loclist toggle<CR>",
-        desc = "Location List",
       },
     },
     opts = {},

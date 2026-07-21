@@ -35,6 +35,8 @@ end
 
 
 function M.setup()
+  require("lsp.commands")
+
   local servers = require("lsp.servers")
 
   local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -45,9 +47,18 @@ function M.setup()
       local ft = vim.bo[args.buf].filetype
 
       local root = vim.fs.root(args.buf, {
+        ".git",
+
         "pyproject.toml",
         "pyrightconfig.json",
-        ".git",
+
+        "go.mod",
+
+        "compile_commands.json",
+        "compile_flags.txt",
+
+        "package.json",
+        "tsconfig.json",
       })
 
       for name, config in pairs(servers) do

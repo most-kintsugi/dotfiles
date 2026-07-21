@@ -76,6 +76,8 @@ local indent_ft = {
   yaml = true,
   htmljinja = true,
   markdown = true,
+  jsonc = true,
+  json = true,
 }
 
 local function apply_indent()

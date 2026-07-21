@@ -3,28 +3,45 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
+    branch = "main",
+
+    build = function()
+      require("nvim-treesitter").install({
+        "lua",
+        "vim",
+        "vimdoc",
+
+        "c",
+        "cpp",
+
+        "python",
+        "bash",
+
+        "javascript",
+        "typescript",
+        "tsx",
+
+        "html",
+        "css",
+        "scss",
+
+        "json",
+        "yaml",
+
+        "markdown",
+      })
+    end,
+
     config = function()
-      local ok, configs = pcall(require, "nvim-treesitter.configs")
-      if not ok then
-        return
-      end
+      local ts = require("nvim-treesitter")
 
-      configs.setup({
-        auto_install = true,
-
-        ensure_installed = {
-          "lua", "vim", "vimdoc",
-          "c", "cpp",
-          "python", "bash", "javascript",
-          "html", "css", "json", "yaml",
-          "markdown", "comment",
-          "regex", "query",
-        },
-
+      ts.setup({
         highlight = {
           enable = true,
-          additional_vim_regex_highlighting = false,
+        },
+
+        indent = {
+          enable = false,
         },
 
         incremental_selection = {
@@ -36,11 +53,7 @@ return {
             node_decremental = "grm",
           },
         },
-
-        indent = {
-          enable = true,
-        },
       })
     end,
-  }
+  },
 }
