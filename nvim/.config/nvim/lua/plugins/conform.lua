@@ -31,7 +31,7 @@ return {
     config = function(_, opts)
       require("conform").setup(opts)
 
-      vim.keymap.set("n", "<leader>cf", function()
+      vim.keymap.set("n", "F", function()
         require("conform").format({
           async = true,
           lsp_fallback = true,

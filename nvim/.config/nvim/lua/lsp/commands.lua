@@ -1,26 +1,33 @@
 local M = {}
 
 vim.api.nvim_create_user_command("LspRestart", function()
-  local clients = vim.lsp.get_clients()
 
-  for _, client in ipairs(clients) do
+  local bufnr = vim.api.nvim_get_current_buf()
+
+  for _, client in ipairs(vim.lsp.get_clients({ bufnr = bufnr })) do
     client:stop()
   end
 
+
   vim.defer_fn(function()
-    vim.cmd("edit")
-  end, 500)
+    require("lsp").start(bufnr)
+  end, 300)
+
 end, {
-  desc = "Restart all LSP clients",
+  desc = "Restart current buffer LSP",
 })
 
 
 vim.api.nvim_create_user_command("LspStop", function()
-  for _, client in ipairs(vim.lsp.get_clients()) do
+
+  local bufnr = vim.api.nvim_get_current_buf()
+
+  for _, client in ipairs(vim.lsp.get_clients({ bufnr = bufnr })) do
     client:stop()
   end
+
 end, {
-  desc = "Stop all LSP clients",
+  desc = "Stop current buffer LSP",
 })
 
 

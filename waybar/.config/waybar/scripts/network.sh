@@ -45,5 +45,5 @@ ssid_short=$(truncate "$ssid" 12)
 if check_internet; then
     echo "{\"text\":\"󰤨  $ssid_short\",\"class\":\"wifi-connected\"}"
 else
-    echo '{"text":"󰤨 no-net","class":"wifi-no-internet"}'
+    echo '{"text":"󰤨  no-net","class":"wifi-no-internet"}'
 fi

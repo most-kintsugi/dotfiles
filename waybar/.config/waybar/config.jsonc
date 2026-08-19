@@ -22,6 +22,7 @@
         "temperature",
         "memory",
         "pulseaudio",
+        "custom/network",
         "custom/battery_state",
     		"hyprland/language",
         "tray"
