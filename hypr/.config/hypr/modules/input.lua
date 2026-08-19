@@ -1,0 +1,13 @@
+hl.config({
+    input = {
+        kb_layout = "us,ru",
+        kb_options = "grp:caps_toggle",
+
+        touchpad = {
+            natural_scroll = true,
+        },
+
+        accel_profile = "adaptive",
+        sensitivity = 0.2,
+    },
+})

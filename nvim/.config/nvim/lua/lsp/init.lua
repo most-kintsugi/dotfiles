@@ -6,7 +6,11 @@ local M = {}
 -----------------
 
 function M.setup_keymaps(bufnr)
-  local opts = { buffer = bufnr, noremap = true, silent = true }
+  local opts = {
+    buffer = bufnr,
+    noremap = true,
+    silent = true,
+  }
 
   vim.keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, {
     desc = "Hover documentation",
@@ -42,24 +46,9 @@ function M.start(bufnr)
 
   local ft = vim.bo[bufnr].filetype
 
-  local root = vim.fs.root(bufnr, {
-    ".git",
-
-    "pyproject.toml",
-    "pyrightconfig.json",
-
-    "go.mod",
-
-    "compile_commands.json",
-    "compile_flags.txt",
-
-    "package.json",
-    "tsconfig.json",
-  })
-
-
   for name, config in pairs(servers) do
     if config.filetypes and vim.tbl_contains(config.filetypes, ft) then
+      local root = vim.fs.root(bufnr, config.root_markers)
 
       vim.lsp.start(
         vim.tbl_extend("force", {
@@ -71,11 +60,9 @@ function M.start(bufnr)
           bufnr = bufnr,
         }
       )
-
     end
   end
 end
-
 
 
 -----------------
@@ -83,22 +70,19 @@ end
 -----------------
 
 function M.setup()
-
   require("lsp.commands")
+
   vim.api.nvim_create_autocmd("BufEnter", {
     callback = function(args)
       M.start(args.buf)
     end,
   })
 
-
   vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
       M.setup_keymaps(args.buf)
     end,
   })
-
 end
-
 
 return M

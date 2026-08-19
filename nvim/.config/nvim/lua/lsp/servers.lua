@@ -1,20 +1,29 @@
 -- lua/lsp/servers.lua
 -- Defines which language servers are enabled
 
-
 return {
   lua_ls = {
     cmd = { "lua-language-server" },
     filetypes = { "lua" },
+
+    root_markers = {
+      ".luarc.json",
+      ".luarc.jsonc",
+      ".luacheckrc",
+      ".stylua.toml",
+      ".git",
+    },
 
     settings = {
       Lua = {
         diagnostics = {
           globals = { "vim" },
         },
+
         workspace = {
           checkThirdParty = false,
         },
+
         telemetry = {
           enable = false,
         },
@@ -22,9 +31,16 @@ return {
     },
   },
 
-	pyright = {
+  pyright = {
     cmd = { "pyright-langserver", "--stdio" },
     filetypes = { "python" },
+
+    root_markers = {
+      "pyproject.toml",
+      "pyrightconfig.json",
+      ".git",
+    },
+
     settings = {
       python = {
         analysis = {
@@ -36,23 +52,36 @@ return {
     },
   },
 
-	clangd = {
-	  cmd = { "clangd" },
-	  filetypes = { "c", "cpp" },
+  clangd = {
+    cmd = { "clangd" },
+    filetypes = { "c", "cpp" },
 
-	  init_options = {
-	    clangdFileStatus = true,
-	  },
-	},
+    root_markers = {
+      "compile_commands.json",
+      "compile_flags.txt",
+      ".git",
+    },
+
+    init_options = {
+      clangdFileStatus = true,
+    },
+  },
 
   gopls = {
     cmd = { "gopls" },
     filetypes = { "go" },
+
+    root_markers = {
+      "go.mod",
+      ".git",
+    },
+
     settings = {
       gopls = {
         analyses = {
           unusedparams = true,
         },
+
         staticcheck = true,
       },
     },
@@ -72,6 +101,12 @@ return {
       "typescriptreact",
       "javascript",
       "javascriptreact",
+    },
+
+    root_markers = {
+      "package.json",
+      "tsconfig.json",
+      ".git",
     },
 
     settings = {},
