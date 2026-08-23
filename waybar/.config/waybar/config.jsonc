@@ -4,8 +4,8 @@
 
     "height": 46,
 
-	"margin-left": 14,
-	"margin-right": 14,
+    "margin-left": 14,
+    "margin-right": 14,
 
     "spacing": 1,
 
@@ -22,9 +22,10 @@
         "temperature",
         "memory",
         "pulseaudio",
+        "custom/microphone",
         "custom/network",
         "custom/battery_state",
-    		"hyprland/language",
+        "hyprland/language",
         "tray"
     ],
 
@@ -33,13 +34,13 @@
     },
 
     "clock": {
-		"format": "{:%Y.%m.%d %H:%M}",
+        "format": "{:%Y.%m.%d %H:%M}",
         "tooltip-format": "{:%A %d %B %Y}"
     },
 
     "cpu": {
         "format": "CPU {usage}%",
-		"tooltip": true,
+        "tooltip": true,
         "interval": 2
     },
 
@@ -50,7 +51,7 @@
 
     "memory": {
         "format": "RAM {used}G",
-		"tooltip": true,
+        "tooltip": true,
         "interval": 2
     },
 
@@ -62,22 +63,29 @@
         }
     },
 
-	"custom/network": {
-		"exec": "~/.config/waybar/scripts/network.sh",
-    	"interval": 3,
-    	"return-type": "json",
-    	"on-click": "networkmanager_dmenu"
-	},
-
-    "custom/battery_state": {
-		"exec": "~/.config/waybar/scripts/battery.sh",
-		"interval": 2,
-		"return-type": "json"
+    "custom/microphone": {
+        "exec": "~/.config/waybar/scripts/microphone.sh",
+        "interval": 1,
+        "return-type": "json",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     },
 
-	"hyprland/language": {
-		"format": "{shortDescription}"
-	},
+    "custom/network": {
+        "exec": "~/.config/waybar/scripts/network.sh",
+        "interval": 3,
+        "return-type": "json",
+        "on-click": "networkmanager_dmenu"
+    },
+
+    "custom/battery_state": {
+        "exec": "~/.config/waybar/scripts/battery.sh",
+        "interval": 2,
+        "return-type": "json"
+    },
+
+    "hyprland/language": {
+        "format": "{shortDescription}"
+    },
 
     "tray": {
         "spacing": 13
