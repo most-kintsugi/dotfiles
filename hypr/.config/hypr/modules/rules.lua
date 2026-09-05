@@ -106,3 +106,18 @@ hl.window_rule({
     center = true,
     size = "1000 500",
 })
+
+hl.window_rule({
+    name = "dolphin-floating",
+
+    match = {
+        class = "^(org.kde.dolphin)$",
+    },
+
+    float = true,
+    center = true,
+    size = "1200 800",
+    rounding = 10,
+    fullscreen = 0,
+    maximize = 0,
+})
