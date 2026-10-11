@@ -1,7 +1,16 @@
 [general]
 
-import = ["/home/player/.config/alacritty/themes/dark/aura.toml"]
+import = ["/home/player/.config/alacritty/themes/dark/autumn.toml"]
 
+# Cascadia patched
+# [font]
+# size = 14
+# normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
+# bold = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold" }
+# italic = { family = "CaskaydiaCove Nerd Font Mono", style = "Italic" }
+# bold_italic = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold Italic" }
+# offset = { x = 0, y = 0 }
+# glyph_offset = { x = 0, y = 0 }
 
 # Cascadia
 # [font]

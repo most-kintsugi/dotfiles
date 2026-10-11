@@ -32,7 +32,12 @@ return {
           },
 
           lualine_y = { "progress" },
-          lualine_z = { "location" },
+          lualine_z = {
+            function()
+              return require("opencode").statusline()
+            end,
+            "location",
+          },
         },
       })
     end,

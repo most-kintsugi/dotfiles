@@ -75,3 +75,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# opencode
+export PATH=/home/player/.opencode/bin:$PATH

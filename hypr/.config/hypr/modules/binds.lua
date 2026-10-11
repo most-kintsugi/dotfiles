@@ -10,7 +10,6 @@ hl.bind(
   hl.dsp.exec_cmd("hyprctl reload")
 )
 
-
 -- =========================
 -- SCRATCH WORKSPACE
 -- =========================
@@ -322,4 +321,34 @@ hl.bind(
   hl.dsp.exec_cmd(
     "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
   )
+)
+hl.bind(
+  config.mod .. " + T",
+  hl.dsp.exec_cmd("hyprctl dispatch togglefloating")
+)
+
+-- toggle floating / tiling
+hl.bind(
+  config.mod .. " + T",
+  hl.dsp.window.float({
+    action = "toggle",
+  })
+)
+
+-- Whisrs dictation: tap Right Ctrl to start/stop recording, Mod + Escape to cancel.
+hl.unbind("CTRL + Control_R")
+hl.bind(
+  "CTRL + Control_R",
+  hl.dsp.exec_cmd("/usr/bin/whisrs toggle"),
+  {
+    release = true,
+    description = "Toggle whisrs dictation",
+  }
+)
+hl.bind(
+  config.mod .. " + Escape",
+  hl.dsp.exec_cmd("/usr/bin/whisrs cancel"),
+  {
+    description = "Cancel whisrs dictation",
+  }
 )

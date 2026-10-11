@@ -121,3 +121,48 @@ hl.window_rule({
     fullscreen = 0,
     maximize = 0,
 })
+
+hl.window_rule({
+  name = "qalculate-floating",
+
+  match = {
+    class = "^(qalculate-gtk)$",
+  },
+
+  float = true,
+  center = true,
+  size = "1000 600",
+  rounding = 10,
+  fullscreen = 0,
+  maximize = 0,
+})
+
+hl.window_rule({
+  name = "krita-opaque",
+
+  match = {
+    class = "^(krita)$",
+  },
+
+  opacity = "1.0 override 1.0 override",
+})
+
+hl.window_rule({
+    name = "visigrid-opaque",
+
+    match = {
+        class = "^(visigrid)$",
+    },
+
+    opacity = "1.0 override 1.0 override",
+})
+
+hl.window_rule({
+    name = "onlyoffice-opaque",
+
+    match = {
+        class = "^(ONLYOFFICE)$",
+    },
+
+    opacity = "1.0 override 1.0 override",
+})
